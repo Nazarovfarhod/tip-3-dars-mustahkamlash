@@ -1,3 +1,30 @@
+/* bruno-ace-sc-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Bruno Ace SC";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/bruno-ace-sc-v5-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* teko-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Teko";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/teko-v20-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* el-messiri-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "El Messiri";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/el-messiri-v22-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 *,
 *::after,
 *::before {
@@ -29,12 +56,24 @@ img {
 body {
   height: 100%;
   display: flex;
+  font-size: 30px;
   flex-direction: column;
+  background-color: azure;
 }
 
 /* normalize css problem fixed */
 h1 {
   margin: 0;
+  font-family: "El Messiri", sans-serif;
+  text-align: center;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+  border-radius: 8px;
 }
 
 .container {
@@ -48,4 +87,115 @@ h1 {
 
 main {
   flex-grow: 1;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  width: 100%;
+  background-color: aquamarine;
+  box-shadow: 8px 8px 0px 0px #000000;
+}
+
+h4 {
+  font-family: "Bruno Ace SC", sans-serif;
+  height: 15px;
+  margin-bottom: 9px;
+  display: flex;
+  justify-content: start;
+}
+
+p {
+  text-align: center;
+  font-family: "Teko", sans-serif;
+  word-spacing: 7px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  background-color: #f5f5f5;
+  color: #222;
+  border-radius: 24px;
+  padding-top: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0px 10px 40px 0px #00000026;
+}
+
+.main-title {
+  font-family: "El Messiri", sans-serif;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.site-btn {
+  margin-top: 10px;
+  margin-bottom: 50px;
+  border: 2px solid cadetblue;
+  width: 15%;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 8px;
+  background-color: cadetblue;
+  color: #222;
+}
+
+.site-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border: 2px solid cadetblue;
+  border-radius: 8px;
+  transition: top, right, bottom, left, 0.2s ease-in-out;
+}
+
+.site-btn:hover::before,
+.site-btn:focus::before {
+  top: -4px;
+  right: -4px;
+  bottom: -4px;
+  left: -4px;
+}
+
+.javoblar-btn {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  border: 2px solid cadetblue;
+  width: 25%;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 12px;
+  background-color: cadetblue;
+  color: #222;
+}
+span {
+  display: block;
+  margin-bottom: 15px;
+
+}
+input {
+  width: 30%;
+}
+
+ul {
+  display: inline-block;
+}
+
+.types {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper-list {
+  display: flex;
+  margin-top: 20px;
 }
